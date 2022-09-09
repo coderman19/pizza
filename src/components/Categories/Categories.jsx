@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 
 
 export default function Categories() {
- const [activeClass, setActiveClass] = useState(2);
+ const [activeClass, setActiveClass] = useState(0);
 
  const categories = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
 
@@ -14,9 +14,12 @@ export default function Categories() {
       <div className="categories">
         <ul>
         {categories.map((value, i) => (
-          <li onClick={() => onClickCategory(i)} 
-          className={activeClass === i ? 'active' : ''}>
-          {value}</li>
+          <li 
+            key={i} 
+            onClick={() => onClickCategory(i)} 
+            className={activeClass === i ? 'active' : ''}>
+            {value}
+          </li>
         ))}
         </ul>
       </div>

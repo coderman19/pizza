@@ -14,13 +14,13 @@ function App(props) {
       <div class="content">
         <div class="container">
           <div class="content__top">
-            <Categories />
+            {/* <Categories /> */}
             <Sort />
           </div>
             <h2 class="content__title">Все пиццы</h2>
             <div class="content__items">
             {items.map((obj) => (
-              <Pizza {...obj}/>
+              <Pizza key={obj.id} {...obj}/>
             ))}
           </div>  
         </div>
