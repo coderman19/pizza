@@ -7,7 +7,7 @@ export default function Pizza({title, price, img, sizes, types}) {
   const [activeSize, setActiveSize] = React.useState(0);
   const typeNames = ['тонкое', 'традиционное'];
   return (
-    <div>
+    <div className="pizza-block-wrapper">
       <div className="pizza-block"> 
             <img 
               className="pizza-block__image"
@@ -15,7 +15,7 @@ export default function Pizza({title, price, img, sizes, types}) {
               alt="Pizza"
             />
               <h4 className="pizza-block__title">{title}</h4>
-            <div className="pizza-block__selector">
+            <div className="pizza-block__selecton">
             <ul>
               {types.map((type) => (
                 <li 

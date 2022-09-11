@@ -1,32 +1,33 @@
+import React from 'react';
+
 import './scss/app.scss';
 import Header from './components/Header/Header';
-import Categories from './components/Categories/Categories';
-import Sort from './components/Sort/Sort';
-import Pizza from './components/Pizza/Pizza';
-import items from './assets/db/db.json';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+// import NotFound from './pages/NotFound';
+
+import './scss/app.scss';
+import { Route, Routes } from 'react-router-dom';
+import NotFoundBlock from './components/NotFoundBlock';
+
 
 function App(props) {
  
   return (
-    <div className="App">        
+       
     <div class="wrapper">
       <Header />
       <div class="content">
         <div class="container">
-          <div class="content__top">
-            {/* <Categories /> */}
-            <Sort />
-          </div>
-            <h2 class="content__title">Все пиццы</h2>
-            <div class="content__items">
-            {items.map((obj) => (
-              <Pizza key={obj.id} {...obj}/>
-            ))}
-          </div>  
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path="*" element={<NotFoundBlock />} />
+          </Routes>
         </div>
       </div>
     </div>
-  </div>
+
   );
 }
 
