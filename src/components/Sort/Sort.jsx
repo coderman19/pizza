@@ -46,7 +46,7 @@ export default function Sort({ value, onChangeSort }) {
                 </ul>
               </div>
               )}
-            </div>
+      </div>
     </div>
   )
 }

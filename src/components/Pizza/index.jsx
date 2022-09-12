@@ -15,7 +15,7 @@ export default function Pizza({title, price, img, sizes, types}) {
               alt="Pizza"
             />
               <h4 className="pizza-block__title">{title}</h4>
-            <div className="pizza-block__selecton">
+            <div className="pizza-block__selector">
             <ul>
               {types.map((type) => (
                 <li 

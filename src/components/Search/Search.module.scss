@@ -1,0 +1,37 @@
+.root {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 12px;
+  width: 240px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.search {
+  position: relative;
+  width: 20px;
+  z-index: 10;
+  padding: 3px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.xicon {
+  position: relative;
+  width: 20px;
+  left: 135px;
+  z-index: 10;
+  padding: 3px;
+  top: 3px;
+  opacity: 0.4;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.input {
+  position: absolute;
+  padding: 4px;
+  opacity: 0.4;
+}

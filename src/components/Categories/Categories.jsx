@@ -6,10 +6,7 @@ export default function Categories({value, onChangeCategory }) {
 
  const categories = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые'];
 
-//  const onClickCategory = (index) => {
-//   setActiveClass(index);
-//  }
- console.log(value);
+
   return (
       <div className="categories">
         <ul>
