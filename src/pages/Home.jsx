@@ -6,11 +6,13 @@ import Categories from '../components/Categories/Categories';
 import Sort from '../components/Sort/Sort';
 import Pizza from '../components/Pizza';
 import Skeleton from '../components/Pizza/Skeleton';
+import { SearchContext } from '../App';
 
 
 
 
-export default function Home({searchValue}) {
+export default function Home() {
+  const { searchValue } = React.useContext(SearchContext);
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -41,12 +43,12 @@ export default function Home({searchValue}) {
   const skeletons = [ ...new Array(6)].map((_, index) => <Skeleton key={index} />);
   return (
     <>
-      <div class="content__top">
+      <div className="content__top">
           <Categories value={categoryId} onChangeCategory={(i) => setCategoryId(i)}/>
           <Sort value={sortType} onChangeSort={(i) => setSortType(i)}/>
           </div>
-            <h2 class="content__title">Все пиццы</h2>
-            <div class="content__items">
+            <h2 className="content__title">Все пиццы</h2>
+            <div className="content__items">
               {isLoading 
               ? skeletons 
                 : pizzas}
