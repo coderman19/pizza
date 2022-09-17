@@ -16,36 +16,10 @@ export const SearchContext = React.createContext();
 
 function App(props) {
  const [searchValue, setSearchValue] = React.useState('');
-//  const count = useSelector((state) => state.counter.count);
-//  const sum = useSelector((state) => state.counter.sum);
-//  const dispatch = useDispatch();
 
-
-
- console.log(searchValue, 'input changed');
   return (
     <div className="wrapper">
-      <SearchContext.Provider value={{ searchValue, setSearchValue }}>
-      {/* <div className={StyleSheet.calculator}>
-      <>
-      <span>{count}</span>
-      <p>{sum}</p>
-      </>
-      <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Прибавить
-        </button>
-       
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Убавить
-        </button>
-      </div> */}
-   
+      <SearchContext.Provider value={{ searchValue, setSearchValue }}>  
       <Header />
         <div className="content">
           <div className="container">
